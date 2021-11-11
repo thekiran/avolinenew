@@ -244,7 +244,9 @@ window.onload = function() {
                         BGImagesObserver.unobserve(bgImge);
                         }
                     });
-                    });
+                    },{
+                        threshold: .1
+                      });
 
                     lazyloadBGImages.forEach(function(bgImges) {
                         BGImagesObserver.observe(bgImges);
