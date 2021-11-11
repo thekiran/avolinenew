@@ -1090,7 +1090,7 @@
     <!-- end scroll to top  -->
     <!-- javascript libraries -->
    
-    <script defer src="bundles/js/libs.js"></script>
+    <!-- <script defer src="bundles/js/libs.js"></script> -->
     <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
     
     <!-- <script type="text/javascript" src="js/modernizr.js"></script>
@@ -1162,6 +1162,26 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <!-- <script src="js/recaptchaConfiguration.js"></script> -->
     
+
+    <script>
+
+        function loadScript(){
+            const script = document.createElement('script')
+
+            script.async = true
+            script.src = 'bundles/js/libs.js';
+
+            document.head.appendChild(script);
+        }
+
+        document.onreadystatechange = function () {
+            if (document.readyState === 'interactive') {
+                loadScript()
+            }
+        }
+
+
+    </script>
            </body>
 
 </html>
