@@ -51,19 +51,17 @@
     <!-- <link rel="preload" as="style" href="css/bundles.css"> -->
     <!-- <link rel="stylesheet" href="css/bundles.css" media="print" onload="this.media='all'"> -->
 
-   <!--800ms  -->
-    <link rel="preload" as="style" href="css/nonCritic.min.css">
-    <link rel="stylesheet" href="css/nonCritic.min.css" media="print" onload="this.media='all'">
-    
-    <!-- 1.64s -->
-    <link rel="preload" as="style" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/libs.min.css"> 
+    <link rel="stylesheet" href="css/nonCritic.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/libs.css"> 
 
 
     <link rel="preload" as="script" href="bundles/js/libs.min.js">
     <script defer src="bundles/js/libs.min.js"></script>
 
     
+    <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+    
+
     <!--[if IE]>
         <script src="js/html5shiv.js"></script>
         <![endif]-->
@@ -1199,9 +1197,20 @@
             document.head.appendChild(script);
         }
 
+        function loadCSS(src){
+
+            var element = document.createElement("link");
+            element.setAttribute("rel", "stylesheet");
+            element.setAttribute("type", "text/css");
+            element.setAttribute("href", src);
+            document.getElementsByTagName("head")[0].appendChild(element);
+            
+        }
+
         document.onreadystatechange = function () {
             if (document.readyState === 'complete') {
                 // loadScript()
+                loadCSS('css/fonts.css')
             }
         }
 

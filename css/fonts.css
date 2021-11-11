@@ -1,0 +1,23 @@
+/* Et lines css */
+
+@font-face{font-family:'et-line';src:url('../fonts/et-line.eot');src:url('../fonts/et-line.eot?#iefix') format('embedded-opentype'),url('../fonts/et-line.woff') format('woff'),url('../fonts/et-line.ttf') format('truetype'),url('../fonts/et-line.svg#et-line') format('svg');font-weight:normal;font-style:normal}
+
+
+/* font awesome */
+
+@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;src:url(../fonts/fa-brands-400.eot);src:url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../fonts/fa-brands-400.woff2) format("woff2"),url(../fonts/fa-brands-400.woff) format("woff"),url(../fonts/fa-brands-400.ttf) format("truetype"),url(../fonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;src:url(../fonts/fa-regular-400.eot);src:url(../fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../fonts/fa-regular-400.woff2) format("woff2"),url(../fonts/fa-regular-400.woff) format("woff"),url(../fonts/fa-regular-400.ttf) format("truetype"),url(../fonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;src:url(../fonts/fa-solid-900.eot);src:url(../fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../fonts/fa-solid-900.woff2) format("woff2"),url(../fonts/fa-solid-900.woff) format("woff"),url(../fonts/fa-solid-900.ttf) format("truetype"),url(../fonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}
+
+
+/* Themifiy Icons */
+ @font-face{font-family:'themify';src:url('../fonts/themify.eot?-fvbane');src:url('../fonts/themify.eot?#iefix-fvbane') format('embedded-opentype'),url('../fonts/themify.woff?-fvbane') format('woff'),url('../fonts/themify.ttf?-fvbane') format('truetype'),url('../fonts/themify.svg?-fvbane#themify') format('svg');font-weight:normal;font-style:normal}
+   
+
+ /* Bootstrap */
+ @font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+
+
+/* Styles.css */
+ @font-face{font-family:'Roboto';font-style:normal;font-display:swap;font-weight:300;src:url('../googlefonts/roboto-v20-latin-300.eot');src:local(''),url('../googlefonts/roboto-v20-latin-300.eot?#iefix') format('embedded-opentype'),url('../googlefonts/roboto-v20-latin-300.woff2') format('woff2'),url('../googlefonts/roboto-v20-latin-300.woff') format('woff'),url('../googlefonts/roboto-v20-latin-300.ttf') format('truetype'),url('../googlefonts/roboto-v20-latin-300.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-display:swap;font-weight:400;src:url('../googlefonts/roboto-v20-latin-regular.eot');src:local(''),url('../googlefonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'),url('../googlefonts/roboto-v20-latin-regular.woff2') format('woff2'),url('../googlefonts/roboto-v20-latin-regular.woff') format('woff'),url('../googlefonts/roboto-v20-latin-regular.ttf') format('truetype'),url('../googlefonts/roboto-v20-latin-regular.svg#Roboto') format('svg')}@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:500;src:url('../googlefonts/montserrat-v15-latin-500.eot');src:local(''),url('../googlefonts/montserrat-v15-latin-500.eot?#iefix') format('embedded-opentype'),url('../googlefonts/montserrat-v15-latin-500.woff2') format('woff2'),url('../googlefonts/montserrat-v15-latin-500.woff') format('woff'),url('../googlefonts/montserrat-v15-latin-500.ttf') format('truetype'),url('../googlefonts/montserrat-v15-latin-500.svg#Montserrat') format('svg')}@font-face{font-family:'Montserrat';font-style:normal;font-display:swap;font-weight:600;src:url('../googlefonts/montserrat-v15-latin-600.eot');src:local(''),url('../googlefonts/montserrat-v15-latin-600.eot?#iefix') format('embedded-opentype'),url('../googlefonts/montserrat-v15-latin-600.woff2') format('woff2'),url('../googlefonts/montserrat-v15-latin-600.woff') format('woff'),url('../googlefonts/montserrat-v15-latin-600.ttf') format('truetype'),url('../googlefonts/montserrat-v15-latin-600.svg#Montserrat') format('svg')}
+
+
