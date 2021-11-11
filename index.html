@@ -43,10 +43,8 @@
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <!-- responsive css -->
     <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
-    <!-- <link rel="stylesheet" href="css/bundles.css"> -->
-    <link rel="preload" href="css/bundles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/bundles.css"></noscript>
 
+    <link rel="stylesheet" href="css/bundles.css">
     <!--[if IE]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
@@ -360,7 +358,7 @@
                 <div class="col-md-5 col-sm-12 col-xs-12 text-center sm-margin-30px-bottom wow fadeInLeft">
                     <div class="display-table width-100 height-100">
                         <div class="display-table-cell vertical-align-middle width-100 height-100">
-                            <img class="lazy" data-src="images/t11.jpg" alt="consultant digital" class="border-radius-6 width-100">
+                            <img data-src="images/t11.jpg" alt="consultant digital" class="lazy border-radius-6 width-100">
                         </div>
                     </div>
                 </div>
@@ -900,7 +898,7 @@
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-10 col-xs-12 text-center center-col last-paragraph-no-margin">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=x6xRGGnvpEo"><img class="lazy" data-src="images/icon-play.png" class="width-130px" alt="Despre AVOline" /></a>
+                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=x6xRGGnvpEo"><img data-src="images/icon-play.png" class="lazy width-130px" alt="Despre AVOline" /></a>
                         <h4 class="text-extra-large font-weight-300 text-white width-85 xs-width-100 display-inline-block margin-25px-bottom">Ce metoda mai buna de a intelege conceptul AVOline, decat printr-un video simpatic?</h4>
                     </div>
                 </div>
@@ -1003,7 +1001,7 @@
                 <div class="row equalize xs-equalize-auto">
                     <div class="col-md-3 col-sm-6 col-xs-12 widget border-right border-color-medium-dark-gray sm-no-border-right sm-margin-30px-bottom xs-text-center">
                         <!-- start logo -->
-                        <a class="margin-20px-bottom display-inline-block"><img class="footer-logo" class="lazy" data-src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="AVOline"></a>
+                        <a class="margin-20px-bottom display-inline-block"><img class="footer-logo" src="images/logo-white.png" data-rjs="images/logo-white@2x.png" alt="AVOline"></a>
                         <!-- end logo -->
                         <p class="text-small width-95 xs-width-100">Dedicat imbunatatirii accesului la Asistenta Juridica de calitate din 2018</p>
                         <ul>
@@ -1156,52 +1154,6 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <!-- <script src="js/recaptchaConfiguration.js"></script> -->
     
-
-    <script>
-        window.onload = function() {
-
-                // Lazy Loading Images
-                const lazyloadImages = document.querySelectorAll(".lazy");
-
-                const imageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                        const image = entry.target;
-                        image.src = image.dataset.src;
-                        image.classList.remove("lazy");
-                        imageObserver.unobserve(image);
-                        }
-                    });
-                    });
-
-                    lazyloadImages.forEach(function(image) {
-                    imageObserver.observe(image);
-                });
-
-
-                // Lazy Loading BGImages
-                const lazyloadBGImages = document.querySelectorAll(".lazy-bg");
-
-
-                const BGImagesObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                        const bgImge = entry.target;
-
-                        bgImge.style = bgImge.dataset.style;
-                        bgImge.classList.remove("lazy-bg");
-                        
-                        BGImagesObserver.unobserve(bgImge);
-                        }
-                    });
-                    });
-
-                    lazyloadBGImages.forEach(function(bgImges) {
-                        BGImagesObserver.observe(bgImges);
-                });
-
-        }
-    </script>
-    </body>
+           </body>
 
 </html>
