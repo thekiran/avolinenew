@@ -1194,6 +1194,11 @@
             script.async = true
             script.src = 'bundles/js/libs.min.js';
 
+            script.onload = function() {
+                $.getScript('https://www.googletagmanager.com/gtag/js?id=UA-189691374-2', function() {})
+                $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
+                
+            }
             document.head.appendChild(script);
         }
 
@@ -1215,7 +1220,6 @@
         }
 
         const tr = document.querySelector('#trigger')
-        // const cn = document.querySelector('#conf')
 
         const TriggerObserver = new IntersectionObserver(function(entries, observer) {
             entries.forEach(function(entry) {
@@ -1223,8 +1227,6 @@
                  loadCSS('css/NonCriticfonts.css')
                  tr.style.display = 'none'
 
-                //  console.log(cn)
-                //  cn.style = cn.dataset-style
 
                 TriggerObserver.unobserve(tr);
                 }
@@ -1234,7 +1236,11 @@
             TriggerObserver.observe(tr);
 
 
-        // Load Et lines and themify  after 110vh
+
+            // document.onreadystatechange = function () {
+            //     if (document.readyState === 'complete') {
+            //     }
+            // }
 
     </script>
            </body>
