@@ -2949,7 +2949,7 @@ function recaptchaExpiredPopup() {
 // $.getScript("js/recaptchaConfiguration.js", function() {});
 
 var html_element_popup_id, html_element_index_id, onloadCallback;
-// $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
+$.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
 
 
 $(document).ready(function() {

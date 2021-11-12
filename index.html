@@ -60,7 +60,7 @@
         <script src="js/html5shiv.js"></script>
         <![endif]-->
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-189691374-2"></script> -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-189691374-2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -1194,11 +1194,6 @@
             script.async = true
             script.src = 'bundles/js/libs.min.js';
 
-            script.onload = function() {
-                $.getScript('https://www.googletagmanager.com/gtag/js?id=UA-189691374-2', function() {})
-                $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
-                
-            }
             document.head.appendChild(script);
         }
 
@@ -1235,12 +1230,6 @@
 
             TriggerObserver.observe(tr);
 
-
-
-            // document.onreadystatechange = function () {
-            //     if (document.readyState === 'complete') {
-            //     }
-            // }
 
     </script>
            </body>
