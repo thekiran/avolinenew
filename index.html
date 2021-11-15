@@ -83,6 +83,17 @@
     <style>
         body { margin: 0px !important;}
     </style>
+
+    <script>
+    // function loadRecaptcha () {
+    
+    //     if (!document.getElementById('recaptcha')) {
+    //         loadScripts('bundles/js/recaptcha.js', 'recaptcha')
+    //     }
+
+    //     return true
+    // }
+    // </script>
 </head>
 <body>
     
@@ -1177,8 +1188,8 @@
         <!-- <script src="js/bootstrap-datetimepicker.min.js"></script> -->
         
         
-        <script type="text/javascript" src="bundles/js/libs.js"></script>
-        <script type="text/javascript" src="bundles/js/newmain.js"></script>
+        <!-- <script type="text/javascript" src="bundles/js/libs.js"></script>
+        <script type="text/javascript" src="bundles/js/newmain.js"></script> -->
 
     <!-- <script>
     $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
@@ -1188,27 +1199,16 @@
     
 
     <script>
-
-
         
-        
-        function loadScripts(src, id){
-            const script = document.createElement('script')
-            
-            script.async = true
-            script.src = src;
-            script.id = id;
+            function loadScripts(src, id){
+                const script = document.createElement('script')
+                
+                script.async = true
+                script.src = src;
+                script.id = id ? id : src;
 
-            document.head.appendChild(script);
-        }
-        // function loadScript(){
-            //     const script = document.createElement('script')
-            
-            //     script.async = true
-            //     // script.src = 'bundles/js/libs.js';
-            
-            //     document.head.appendChild(script);
-            // }
+                document.head.appendChild(script);
+            }
             
             function loadCSS(src){
                 
@@ -1219,63 +1219,24 @@
                 document.getElementsByTagName("head")[0].appendChild(element);
                 
             }
+
+            window.loadCSS = loadCSS
+
             loadCSS('css/fonts.css')
             
             document.onreadystatechange = function () {
                 if (document.readyState === 'interactive') {
                     loadScripts('bundles/js/libs.js', 'libs')
                 } 
-                // else 
                 
                 if (document.readyState === 'complete') {
                     loadScripts('https://www.googletagmanager.com/gtag/js?id=UA-189691374-2')
                 }
             }
             
-            const tr = document.querySelector('#trigger')
+            
+            
 
-        const TriggerObserver = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                 loadCSS('css/NonCriticfonts.css')
-                 tr.style.display = 'none'
-
-
-                TriggerObserver.unobserve(tr);
-                }
-            });
-            });
-
-            TriggerObserver.observe(tr);
-
-
-            // lazy loading recaptcha
-
-            const anchors = document.querySelectorAll('a[href$="modal-popup2"]');
-
-
-            const loadRecaptcha = (a) => {
-
-
-                if (!document.getElementById('recaptcha')) {
-                    loadScripts('bundles/js/recaptcha.js', 'recaptcha')
-                }
-
-                console.log(a)
-                console.log(window.location)
-
-                // window.location.href = window.location.origin + '/#modal-popup2';
-
-                // if(window.onloadCallback) {
-                //     a.click()
-                //     console.log(window.onloadCallback)
-                // }
-
-                }
-
-            anchors.forEach(function(a) {
-                a.addEventListener('mouseover',loadRecaptcha)
-            });
 
     </script>
            
