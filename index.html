@@ -60,7 +60,7 @@
         <script src="js/html5shiv.js"></script>
         <![endif]-->
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-189691374-2"></script>
+        <!-- <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-189691374-2"></script> -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -1177,7 +1177,8 @@
         <!-- <script src="js/bootstrap-datetimepicker.min.js"></script> -->
         
         
-        <!-- <script type="text/javascript" src="js/main.js"></script> -->
+        <script type="text/javascript" src="bundles/js/libs.js"></script>
+        <script type="text/javascript" src="bundles/js/newmain.js"></script>
 
     <!-- <script>
     $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function() {});
@@ -1188,33 +1189,50 @@
 
     <script>
 
-        function loadScript(){
-            const script = document.createElement('script')
 
+        
+        
+        function loadScripts(src, id){
+            const script = document.createElement('script')
+            
             script.async = true
-            script.src = 'bundles/js/libs.js';
+            script.src = src;
+            script.id = id;
 
             document.head.appendChild(script);
         }
-
-        function loadCSS(src){
-
-            var element = document.createElement("link");
-            element.setAttribute("rel", "stylesheet");
-            element.setAttribute("type", "text/css");
-            element.setAttribute("href", src);
-            document.getElementsByTagName("head")[0].appendChild(element);
+        // function loadScript(){
+            //     const script = document.createElement('script')
             
-        }
-        loadCSS('css/fonts.css')
-
-        document.onreadystatechange = function () {
-            if (document.readyState === 'interactive') {
-                loadScript()
+            //     script.async = true
+            //     // script.src = 'bundles/js/libs.js';
+            
+            //     document.head.appendChild(script);
+            // }
+            
+            function loadCSS(src){
+                
+                var element = document.createElement("link");
+                element.setAttribute("rel", "stylesheet");
+                element.setAttribute("type", "text/css");
+                element.setAttribute("href", src);
+                document.getElementsByTagName("head")[0].appendChild(element);
+                
             }
-        }
-
-        const tr = document.querySelector('#trigger')
+            loadCSS('css/fonts.css')
+            
+            document.onreadystatechange = function () {
+                if (document.readyState === 'interactive') {
+                    loadScripts('bundles/js/libs.js', 'libs')
+                } 
+                // else 
+                
+                if (document.readyState === 'complete') {
+                    loadScripts('https://www.googletagmanager.com/gtag/js?id=UA-189691374-2')
+                }
+            }
+            
+            const tr = document.querySelector('#trigger')
 
         const TriggerObserver = new IntersectionObserver(function(entries, observer) {
             entries.forEach(function(entry) {
@@ -1231,7 +1249,38 @@
             TriggerObserver.observe(tr);
 
 
+            // lazy loading recaptcha
+
+            const anchors = document.querySelectorAll('a[href$="modal-popup2"]');
+
+
+            const loadRecaptcha = (a) => {
+
+
+                if (!document.getElementById('recaptcha')) {
+                    loadScripts('bundles/js/recaptcha.js', 'recaptcha')
+                }
+
+                console.log(a)
+                console.log(window.location)
+
+                // window.location.href = window.location.origin + '/#modal-popup2';
+
+                // if(window.onloadCallback) {
+                //     a.click()
+                //     console.log(window.onloadCallback)
+                // }
+
+                }
+
+            anchors.forEach(function(a) {
+                a.addEventListener('mouseover',loadRecaptcha)
+            });
+
     </script>
-           </body>
+           
+        
+        
+</body>
 
 </html>
