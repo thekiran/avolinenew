@@ -256,6 +256,12 @@ if (window.tplogs==true)
 
 window.onload = function() {
 
+    const options = {
+        root: null,
+        rootMargin: "0px 0px 200px 0px",
+        threshold: 0.1,
+      }
+
                 // Lazy Loading Images
                 const lazyloadImages = document.querySelectorAll(".lazy");
 
@@ -268,7 +274,7 @@ window.onload = function() {
                         imageObserver.unobserve(image);
                         }
                     });
-                    });
+                    },options);
 
                     lazyloadImages.forEach(function(image) {
                     imageObserver.observe(image);
@@ -290,9 +296,7 @@ window.onload = function() {
                         BGImagesObserver.unobserve(bgImge);
                         }
                     });
-                    },{
-                        threshold: .1
-                      });
+                    },options);
 
                     lazyloadBGImages.forEach(function(bgImges) {
                         BGImagesObserver.observe(bgImges);
@@ -310,7 +314,7 @@ window.onload = function() {
                         TriggerObserver.unobserve(tr);
                         }
                     });
-                });
+                },options);
     
                 TriggerObserver.observe(tr);
         
